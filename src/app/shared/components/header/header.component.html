@@ -1,29 +1,38 @@
-<nav class="text-white shadow-lg">
-  <div class="max-w-6xl mx-auto px-4">
-    <div class="flex items-center justify-between">
-      <div class="flex space-x-4 items-center">
-        <!-- логотип -->
-        <div class="flex items-center py-5 px-2 text-white-700 ">
-            <div>
-              <img src="#" alt="Logo">
-            </div>
-            <span class="">4Paws</span>
-        </div>
-        <!-- основные ссылки -->
-        <div class="hidden md:flex items-center space-x-1">
-          <a routerLink="#" class="py-5 px-3 hover:bg-amber-300">Главная</a>
-          <a routerLink="#" class="py-5 px-3 hover:bg-amber-300">О нас</a>
-          <a routerLink="#" class="py-5 px-3 hover:bg-amber-300">Вопросы и Ответы</a>
-          <a routerLink="#" class="py-5 px-3 hover:bg-amber-300">Контакты</a>
-          <a routerLink="#" class="py-5 px-3 hover:bg-amber-300">Услуги</a>
-        </div>
+<nav class="bg-white dark:bg-gray-900 w-full z-20 top-0 start-0 border-b border-gray-200 dark:border-gray-600">
+  <div class="max-w-screen-xl flex items-center justify-between mx-auto p-4">
+    <a href="#" class="flex items-center space-x-3 rtl:space-x-reverse">
+      <img ngSrc="./assets/images/logo.svg" alt="Logo" height="56" width="56">
+      <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">4Paws</span>
+    </a>
+    <div class="items-center justify-between hidden w-full md:flex md:w-auto" >
+      <ul class="flex flex-col p-4 md:p-0 mt-4 font-medium border border-gray-100 rounded-lg bg-gray-50 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
+        <li>
+          <a href="#" class="block py-2 px-3 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 md:dark:text-blue-500" aria-current="page">Главная</a>
+        </li>
+        <li>
+          <a href="#" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">О нас</a>
+        </li>
+        <li>
+          <a href="#" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Вопросы и Ответы</a>
+        </li>
+        <li>
+          <a href="#" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Контакты</a>
+        </li>
+        <li>
+          <a href="#" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Услуги</a>
+        </li>
+      </ul>
+    </div>
+    <div class="flex items-center gap-4">
+      <div class="flex w-12 h-12 rounded-full bg-amber-400 justify-center">
+        <img ngSrc="./assets/images/phone-call.svg" alt="" height="25" width="25">
       </div>
-
-      <div>
-        <div class="example-button-container">
-
-        </div>
+      <div class="font-medium dark:text-white">
+        <div>Бельцы, Молдова</div>
+        <div class="text-sm text-gray-500 dark:text-gray-400">+373 79923225</div>
       </div>
     </div>
+
+
   </div>
 </nav>
