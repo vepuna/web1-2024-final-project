@@ -7,7 +7,10 @@ module.exports = {
     extend: {
       backgroundImage: {
         'custom-bg': "url('/src/assets/images/background.jpg')",
-      }
+      },
+      colors: {
+        lightOrange: 'rgb(239, 141, 68)'
+      },
     },
   },
   plugins: [],
