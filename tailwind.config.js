@@ -11,6 +11,9 @@ module.exports = {
       colors: {
         lightOrange: 'rgb(239, 141, 68)'
       },
+      fontFamily: {
+        sans: ['Montserrat', 'sans-serif'],
+      },
     },
   },
   plugins: [],
