@@ -1,8 +1,26 @@
-<div class="flex justify-between items-top mt-20 mb-20 rounded-2xl border-2 border-gray-300 p-5">
-  <div class="flex items-center">
-    <div class="flex w-28 h-16 m-3  rounded-xl bg-amber-400 justify-center items-center">
-      <span class="font-bold text-4xl">{{dateOfFounding}}</span>
+<div class="flex flex-wrap justify-center gap-5 md:justify-between md:items-top mt-20 mb-20 rounded-2xl border-2 border-gray-300 p-5">
+  <div class="flex flex-col max-w-72 items-center mx-8 md:flex-row md:w-1/4">
+    <div class="flex m-3 p-4 rounded-xl bg-amber-400 justify-center items-center">
+      <div class="font-bold text-4xl"><span>{{dateOfFounding}}</span></div>
     </div>
-    <div><span class="font-light">Год основания нашего <br> приюта для животных</span></div>
+    <div><span class="font-light">Год основания нашего приюта для животных</span></div>
+  </div>
+  <div class="flex flex-col max-w-72 items-center mx-8 md:flex-row md:w-1/4">
+    <div class="flex m-3 p-4 rounded-xl bg-amber-400 justify-center items-center">
+      <div class="font-bold text-4xl"><span>{{animalsFoundedHouse}}+</span></div>
+    </div>
+    <div><span class="font-light">Животных нашли свой новый дом</span></div>
+  </div>
+  <div class="flex flex-col max-w-72 items-center mx-8 md:flex-row md:w-1/4">
+    <div class="flex m-3 p-4 rounded-xl bg-amber-400 justify-center items-center">
+      <div class="font-bold text-4xl"><span>{{animalsInWaiting}}+</span></div>
+    </div>
+    <div><span class="font-light">Животных ожидают своего хозяина</span></div>
+  </div>
+  <div class="flex flex-col max-w-72 items-center mx-8 md:flex-row md:w-1/4">
+    <div class="flex m-3 p-4 rounded-xl bg-amber-400 justify-center items-center">
+      <div class="font-bold text-4xl"><span>{{numberVolunteers}}+</span></div>
+    </div>
+    <div><span class="font-light">Волонтеров, помогающих приюту</span></div>
   </div>
 </div>
