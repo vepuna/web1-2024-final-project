@@ -15,7 +15,9 @@ export class AvailableAnimalsComponent implements OnInit  {
 constructor(
   public postService: PostsService) {}
   ngOnInit(): void {
-    this.postService.getAll().subscribe();
+    this.postService.getAll().subscribe(products => {
+      console.log(products);
+    });
   }
 
 }

@@ -1,3 +1,12 @@
-<div class="h-60">
-  {{post.id}} {{post.name}}
-</div>
+<a href="#" class="flex flex-col bg-white border border-gray-200 rounded-lg shadow md:flex-row md:max-w-2xl hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700">
+  <div class="relative overflow-hidden w-full rounded-t-lg h-96 md:w-80 h-80 md:rounded-none md:rounded-s-lg">
+    <img class="object-cover w-full h-full transform scale-100 transition duration-300 ease-in-out hover:scale-110" [src]="post.image | imageUrl" alt="*_*">
+  </div>
+  <div class="flex flex-col justify-between items-center m-4 p-8 w-80">
+    <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">{{post.name}}</h5>
+    <span class="mb-3 font-normal max-w-48 text-gray-700 dark:text-gray-400 overflow-hidden overflow-ellipsis">{{post.description}}</span>
+    <button type="button" class="focus:outline-none text-white bg-lightOrange hover:bg-yellow-500 focus:ring-4 focus:ring-yellow-300 font-bold rounded-lg text-lg py-4 px-8  me-2 mb-2 dark:focus:ring-yellow-900">Забрать питомца</button>
+  </div>
+
+
+</a>

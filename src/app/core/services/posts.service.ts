@@ -16,11 +16,8 @@ export class PostsService {
   posts: IPosts[] = [];
 
   getAll(): Observable<IPosts[]>{
-    return this.http.get<IPosts[]>('http://localhost:5000/posts',{
-      params: new HttpParams({
-        fromObject: {limit: 5}
-      })
-    }).pipe(
+    return this.http.get<IPosts[]>('http://localhost:5000/posts')
+    .pipe(
       retry(2),
       tap(posts => this.posts = posts)
     )
