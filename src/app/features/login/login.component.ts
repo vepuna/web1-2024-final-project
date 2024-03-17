@@ -8,8 +8,7 @@ import { Router } from '@angular/router';
   selector: 'app-login',
   standalone: true,
   imports: [FormsModule, HttpClientModule],
-  templateUrl: './login.component.html',
-  styleUrl: './login.component.css'
+  templateUrl: './login.component.html'
 })
 export class LoginComponent {
   loginObj: Login;
@@ -20,23 +19,23 @@ export class LoginComponent {
 
   onLogin() {
     debugger;
-    this.http.post('http://localhost:5000/login', this.loginObj).subscribe((res:any)=>{
-      if(res.result) {
-        alert("Login Success");
-        localStorage.setItem('angular17token', res.data.token)
+    console.log(this.loginObj);
+    this.http.post('http://localhost:5000/auth/login', this.loginObj).subscribe((res:any)=>{
+      if(res.token) {
+        localStorage.setItem('JWToken', res.token)
         this.router.navigateByUrl('/dashboard')
       } else {
-        alert(res.message)
+        console.log(res.message);
       }
     })
   }
 }
 
 export class Login {
-  Email: string;
-  Password: string;
+  email: string;
+  password: string;
   constructor() {
-    this.Email = '';
-    this.Password = '';
+    this.email = '';
+    this.password = '';
   }
 }
