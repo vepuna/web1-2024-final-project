@@ -2,7 +2,6 @@ import { Component } from '@angular/core';
 import {PostsService} from "../../../../core/services/posts.service";
 import {NgForOf, NgIf} from "@angular/common";
 import {PostComponent} from "../../../../shared/components/post/post.component";
-import {TableRowComponent} from "../../../../shared/components/table-row/table-row.component";
 import {ImageUrlPipe} from "../../../../shared/pipe/image-url.pipe";
 
 @Component({
@@ -12,7 +11,6 @@ import {ImageUrlPipe} from "../../../../shared/pipe/image-url.pipe";
     NgForOf,
     NgIf,
     PostComponent,
-    TableRowComponent,
     ImageUrlPipe
   ],
   templateUrl: './table-animals.component.html'
