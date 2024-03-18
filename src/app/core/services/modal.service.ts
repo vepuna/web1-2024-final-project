@@ -1,18 +1,26 @@
 import {Injectable} from '@angular/core'
-import {BehaviorSubject} from 'rxjs'
+import {BehaviorSubject, Observable} from 'rxjs'
+import {IPosts} from "../models/posts.model";
 
 @Injectable({
   providedIn: 'root'
 })
 export class ModalService {
 
-  isVisible$ = new BehaviorSubject<boolean>(false)
+  private isVisibleSubject: BehaviorSubject<boolean> = new BehaviorSubject<boolean>(false);
+  public isVisible$: Observable<boolean> = this.isVisibleSubject.asObservable();
+  private selectedPostSubject: BehaviorSubject<IPosts| null> = new BehaviorSubject<IPosts | null>(null);
+  public selectedPost$: Observable<IPosts | null> = this.selectedPostSubject.asObservable();
 
-  open() {
-    this.isVisible$.next(true)
+  constructor() { }
+
+  open(post: IPosts) {
+    console.log(post);
+    this.selectedPostSubject.next(post);
+    this.isVisibleSubject.next(true);
   }
 
   close() {
-    this.isVisible$.next(false)
+    this.isVisibleSubject.next(false);
   }
 }

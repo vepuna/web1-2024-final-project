@@ -24,7 +24,15 @@
     <ng-container *ngFor="let post of postService.posts; let i = index">
 
       <app-modal  *ngIf="modalService.isVisible$ | async" class="z-50">
-        <app-edit-post [name]="post.name" [type]="post.type"></app-edit-post>
+        <app-edit-post [name]="(modalService.selectedPost$ | async)?.name || ''"
+                       [type]="(modalService.selectedPost$ | async)?.type || ''"
+                       [description]="(modalService.selectedPost$ | async)?.description || ''"
+                       [age]="(modalService.selectedPost$ | async)?.age || ''"
+                       [gender]="(modalService.selectedPost$ | async)?.gender || ''"
+                       [userId]="String((modalService.selectedPost$ | async)?.userId) || ''"
+                       [postId]="String((modalService.selectedPost$ | async)?.id) || ''"
+
+        ></app-edit-post>
       </app-modal>
       <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
         <th scope="row" class="flex items-center px-6 py-4 text-gray-900 whitespace-nowrap dark:text-white">
@@ -48,7 +56,7 @@
           </div>
         </td>
         <td class="px-6 py-4">
-          <p (click)="modalService.open()" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Edit</p>
+          <p (click)="modalService.open(post)" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Edit</p>
         </td>
       </tr>
 
@@ -58,7 +66,3 @@
 </div>
 </div>
 
-
-<button class="rounded-3xl bg-amber-400 "
-(click)="modalService.open()"
->Hello</button>

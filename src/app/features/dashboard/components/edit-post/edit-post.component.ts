@@ -1,6 +1,8 @@
 import {Component, Input, OnInit} from '@angular/core';
-import {FormControl, FormGroup, ReactiveFormsModule, Validators} from "@angular/forms";
+import {FormBuilder, FormControl, FormGroup, ReactiveFormsModule, Validators} from "@angular/forms";
 import {ImageUrlPipe} from "../../../../shared/pipe/image-url.pipe";
+import {ModalService} from "../../../../core/services/modal.service";
+import {HttpClient} from "@angular/common/http";
 
 @Component({
   selector: 'app-edit-post',
@@ -18,19 +20,32 @@ export class EditPostComponent implements OnInit{
   @Input() age: string;
   @Input() description: string;
   @Input() userId: string;
-  //@Input() image: File;
-  constructor() {
+  @Input() postId: string;
+
+  form: FormGroup;
+
+  constructor(private http: HttpClient) {}
+
+  ngOnInit(): void {
+    this.form = new FormGroup({
+      name: new FormControl(this.name),
+      type: new FormControl(this.type),
+      gender: new FormControl(this.gender),
+      age: new FormControl(this.age),
+      description: new FormControl(this.description),
+      userId: new FormControl(this.userId),
+      // image: new FormControl(null) // Убрал для примера
+    });
   }
-  form = new FormGroup({
-    name: new FormControl<string>(''),
-    type: new FormControl<string>(''),
-    gender: new FormControl<string>(''),
-    age: new FormControl<string>(''),
-    description: new FormControl<string>(''),
-    userId: new FormControl<string>(''),
-    //image: new FormControl<File>(null),
-  })
-  ngOnInit() {
+
+  onSubmit(): void {
+    const formData = new FormData();
+    formData.append('name', this.form.value.name);
+    formData.append('type', this.form.value.type);
+    formData.append('gender', this.form.value.gender);
+    formData.append('age', this.form.value.age);
+    formData.append('description', this.form.value.description);
+    formData.append('userId', this.form.value.userId);
   }
   submit(){
     console.log(this.form.value)
