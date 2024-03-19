@@ -41,4 +41,11 @@ export class PostsService {
     );
   }
 
+  createPost(formData: FormData, token: string): Observable<any> {
+    const headers = new HttpHeaders().set('Authorization', `Bearer ${token}`);
+    return this.http.post(`http://localhost:5000/posts`, formData, { headers }) .pipe(
+      retry(2),
+      switchMap(() => this.getAll())
+    )
+  }
 }

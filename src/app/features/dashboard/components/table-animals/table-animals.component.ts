@@ -6,6 +6,7 @@ import {ImageUrlPipe} from "../../../../shared/pipe/image-url.pipe";
 import {ModalComponent} from "../../../../shared/components/modal/modal.component";
 import {EditPostComponent} from "../edit-post/edit-post.component";
 import {ModalService} from "../../../../core/services/modal.service";
+import {CreatePostComponent} from "../create-post/create-post.component";
 
 
 @Component({
@@ -18,7 +19,8 @@ import {ModalService} from "../../../../core/services/modal.service";
     ImageUrlPipe,
     ModalComponent,
     EditPostComponent,
-    AsyncPipe
+    AsyncPipe,
+    CreatePostComponent
   ],
   templateUrl: './table-animals.component.html'
 })

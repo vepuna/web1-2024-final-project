@@ -7,23 +7,27 @@ import {IPosts} from "../models/posts.model";
 })
 export class ModalService {
 
-  private isVisibleSubject: BehaviorSubject<boolean> = new BehaviorSubject<boolean>(false);
-  public isVisible$: Observable<boolean> = this.isVisibleSubject.asObservable();
-  private selectedPostSubject: BehaviorSubject<IPosts| null> = new BehaviorSubject<IPosts | null>(null);
+  private isVisibleEditSubject: BehaviorSubject<boolean> = new BehaviorSubject<boolean>(false);
+  public isVisibleEdit$: Observable<boolean> = this.isVisibleEditSubject.asObservable();
+  private isVisibleCreateSubject: BehaviorSubject<boolean> = new BehaviorSubject<boolean>(false);
+  public isVisibleCreate$: Observable<boolean> = this.isVisibleCreateSubject.asObservable();
+  private selectedPostSubject: BehaviorSubject<IPosts | null> = new BehaviorSubject<IPosts | null>(null);
   public selectedPost$: Observable<IPosts | null> = this.selectedPostSubject.asObservable();
 
   constructor() { }
 
-  openEmpty(){
-    this.isVisibleSubject.next(true);
+  openCreate() {
+    this.isVisibleCreateSubject.next(true);
   }
+
   open(post: IPosts) {
     console.log(post);
     this.selectedPostSubject.next(post);
-    this.isVisibleSubject.next(true);
+    this.isVisibleEditSubject.next(true);
   }
 
   close() {
-    this.isVisibleSubject.next(false);
+    this.isVisibleEditSubject.next(false);
+    this.isVisibleCreateSubject.next(false);
   }
 }

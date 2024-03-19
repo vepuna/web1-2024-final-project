@@ -29,8 +29,7 @@ export class EditPostComponent implements OnInit{
   form: FormGroup;
 
   private fileSelected = false;
-  constructor(private http: HttpClient,
-              private postsService: PostsService,
+  constructor(private postsService: PostsService,
               private fb: FormBuilder,
               private authService: AuthService,
               private modalService: ModalService) {}
