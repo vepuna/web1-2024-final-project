@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import {ChangeDetectionStrategy, Component, OnInit} from '@angular/core';
 import {PostsService} from "../../../../core/services/posts.service";
 import {AsyncPipe, NgForOf, NgIf} from "@angular/common";
 import {PostComponent} from "../../../../shared/components/post/post.component";
@@ -22,12 +22,16 @@ import {ModalService} from "../../../../core/services/modal.service";
   ],
   templateUrl: './table-animals.component.html'
 })
-export class TableAnimalsComponent {
+export class TableAnimalsComponent implements OnInit {
 
   constructor(
     public postService: PostsService,
     public modalService: ModalService ) {}
   ngOnInit(): void {
+    this.loadPosts();
+  }
+
+  loadPosts(): void {
     this.postService.getAll().subscribe(products => {
       console.log(products);
     });

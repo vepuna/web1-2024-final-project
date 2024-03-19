@@ -14,6 +14,9 @@ export class ModalService {
 
   constructor() { }
 
+  openEmpty(){
+    this.isVisibleSubject.next(true);
+  }
   open(post: IPosts) {
     console.log(post);
     this.selectedPostSubject.next(post);

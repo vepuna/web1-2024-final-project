@@ -1,3 +1,4 @@
+
 <div class="relative overflow-x-auto shadow-md sm:rounded-lg my-20 h-full">
   <div class="flex items-center justify-between flex-column flex-wrap md:flex-row space-y-4 md:space-y-0 pb-4 bg-white dark:bg-gray-900">
   <table class="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
@@ -23,7 +24,7 @@
     <tbody *ngIf='postService'>
     <ng-container *ngFor="let post of postService.posts; let i = index">
 
-      <app-modal  *ngIf="modalService.isVisible$ | async" class="z-50">
+      <app-modal *ngIf="modalService.isVisible$ | async" class="z-50">
         <app-edit-post [name]="(modalService.selectedPost$ | async)?.name || ''"
                        [type]="(modalService.selectedPost$ | async)?.type || ''"
                        [description]="(modalService.selectedPost$ | async)?.description || ''"

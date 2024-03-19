@@ -5,6 +5,7 @@ import {ModalService} from "../../../../core/services/modal.service";
 import {HttpClient} from "@angular/common/http";
 import {PostsService} from "../../../../core/services/posts.service";
 import {AuthService} from "../../../../core/services/auth.service";
+import {TableAnimalsComponent} from "../table-animals/table-animals.component";
 
 @Component({
   selector: 'app-edit-post',
@@ -27,11 +28,12 @@ export class EditPostComponent implements OnInit{
 
   form: FormGroup;
 
+  private fileSelected = false;
   constructor(private http: HttpClient,
               private postsService: PostsService,
               private fb: FormBuilder,
-              private authService: AuthService) {}
-
+              private authService: AuthService,
+              private modalService: ModalService) {}
   ngOnInit(): void {
     this.form = this.fb.group({
       postId: [+this.postId],
@@ -44,9 +46,16 @@ export class EditPostComponent implements OnInit{
       image: [this.image] ,
     });
   }
-
-  onSubmit(): void {
-
+  onFileSelected(event: any): void {
+    if (event.target.files.length > 0) {
+      const file = event.target.files[0];
+      this.form.patchValue({
+        image: file,
+      });
+      this.fileSelected = true;
+    }
+  }
+  updateSubmit(): void {
     const formData = new FormData();
     formData.append('name', this.form.value.name);
     formData.append('type', this.form.value.type);
@@ -54,23 +63,30 @@ export class EditPostComponent implements OnInit{
     formData.append('age', this.form.value.age);
     formData.append('description', this.form.value.description);
     formData.append('userId', this.form.value.userId);
-    formData.append('image', this.form.value.image);
     formData.append('postId', this.form.value.postId);
 
+    if(this.fileSelected){
+      formData.append('image', this.form.value.image);
+    }
+
     const token = this.authService.getToken();
-    this.postsService.uploadPost(formData, token).subscribe();
+    this.postsService.updatePost(formData, token).subscribe();
     console.log(formData, token);
+
+    this.modalService.close();
   }
+
+  deleteSubmit(): void {
+    const token = this.authService.getToken();
+    this.postsService.deletePost(this.postId, token).subscribe();
+
+    this.modalService.close();
+  }
+
+
   submit(){
     console.log(this.form.value)
   }
 
-  onFileSelected(event: any): void {
-    if (event.target.files.length > 0) {
-      const file = event.target.files[0];
-      this.form.patchValue({
-        image: file,
-      });
-    }
-  }
+
 }
