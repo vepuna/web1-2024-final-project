@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import {HttpClient, HttpErrorResponse, HttpParams} from "@angular/common/http";
+import {HttpClient, HttpErrorResponse, HttpHeaders, HttpParams} from "@angular/common/http";
 import {delay, Observable, retry, tap, throwError} from "rxjs";
 import {IPosts} from "../models/posts.model";
 
@@ -23,5 +23,9 @@ export class PostsService {
     )
   }
 
+  uploadPost(formData: FormData, token: string): Observable<any> {
+    const headers = new HttpHeaders().set('Authorization', `Bearer ${token}`);
+    return this.http.put(`http://localhost:5000/posts`, formData, { headers });
+  }
 
 }

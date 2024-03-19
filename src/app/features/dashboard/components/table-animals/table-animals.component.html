@@ -31,7 +31,7 @@
                        [gender]="(modalService.selectedPost$ | async)?.gender || ''"
                        [userId]="String((modalService.selectedPost$ | async)?.userId) || ''"
                        [postId]="String((modalService.selectedPost$ | async)?.id) || ''"
-
+                       [image]="String((modalService.selectedPost$ | async)?.image) || ''"
         ></app-edit-post>
       </app-modal>
       <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
