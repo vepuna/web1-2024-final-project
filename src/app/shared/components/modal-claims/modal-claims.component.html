@@ -1,0 +1,15 @@
+<form [formGroup]="form" (ngSubmit)="submit()">
+  <div class="grid gap-4 mb-4 sm:grid-cols-1 w-64 items-center justify-items-center">
+    <h1 class="text-center font-bold text-2xl">Оставить заявку</h1>
+    <p class="block text-center mb-2 text-sm font-light text-gray-900 dark:text-white">Отправьте заявку и наши специалисты перезвонят Вам</p>
+    <input type="text" name="name" id="name" formControlName="name" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="Ваше имя">
+    <input type="text" name="brand" id="brand"  formControlName="phone" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="Номер телефона">
+    <input type="text" name="age" id="age"  formControlName="description" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="Комментарий">
+    <button type="submit" (click)="createSubmit()" class="mt-5 text-xl text-white bg-lightOrange hover:bg-primary-800 focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium rounded-lg px-5 py-2.5 text-center dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800">
+      Отправить заявку
+    </button>
+  </div>
+</form>
+
+
+

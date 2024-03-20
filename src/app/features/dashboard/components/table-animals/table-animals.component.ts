@@ -7,6 +7,8 @@ import {ModalComponent} from "../../../../shared/components/modal/modal.componen
 import {EditPostComponent} from "../edit-post/edit-post.component";
 import {ModalService} from "../../../../core/services/modal.service";
 import {CreatePostComponent} from "../create-post/create-post.component";
+import {ModalClaimsComponent} from "../../../../shared/components/modal-claims/modal-claims.component";
+import {moveItemInArray} from "@angular/cdk/drag-drop";
 
 
 @Component({
@@ -20,7 +22,8 @@ import {CreatePostComponent} from "../create-post/create-post.component";
     ModalComponent,
     EditPostComponent,
     AsyncPipe,
-    CreatePostComponent
+    CreatePostComponent,
+    ModalClaimsComponent
   ],
   templateUrl: './table-animals.component.html'
 })

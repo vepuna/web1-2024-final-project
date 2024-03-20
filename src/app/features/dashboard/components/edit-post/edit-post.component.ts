@@ -82,10 +82,8 @@ export class EditPostComponent implements OnInit{
     this.modalService.close();
   }
 
-
   submit(){
     console.log(this.form.value)
   }
-
 
 }

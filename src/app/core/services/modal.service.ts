@@ -13,9 +13,14 @@ export class ModalService {
   public isVisibleCreate$: Observable<boolean> = this.isVisibleCreateSubject.asObservable();
   private selectedPostSubject: BehaviorSubject<IPosts | null> = new BehaviorSubject<IPosts | null>(null);
   public selectedPost$: Observable<IPosts | null> = this.selectedPostSubject.asObservable();
+  private isVisibleClaimSubject: BehaviorSubject<boolean> = new BehaviorSubject<boolean>(false);
+  public isVisibleClaim$: Observable<boolean> = this.isVisibleClaimSubject.asObservable();
 
   constructor() { }
 
+  openClaim(){
+    this.isVisibleClaimSubject.next(true);
+  }
   openCreate() {
     this.isVisibleCreateSubject.next(true);
   }
@@ -27,6 +32,7 @@ export class ModalService {
   }
 
   close() {
+    this.isVisibleClaimSubject.next(false);
     this.isVisibleEditSubject.next(false);
     this.isVisibleCreateSubject.next(false);
   }

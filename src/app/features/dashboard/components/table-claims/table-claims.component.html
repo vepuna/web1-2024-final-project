@@ -1,0 +1,45 @@
+<div class="relative overflow-x-auto shadow-md sm:rounded-lg my-2.5 h-full">
+  <div class="flex items-center justify-between flex-column flex-wrap md:flex-row space-y-4 md:space-y-0 pb-4 bg-white dark:bg-gray-900">
+    <table class="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
+      <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
+      <tr>
+        <th scope="col" class="px-6 py-3">
+          Name
+        </th>
+        <th scope="col" class="px-6 py-3">
+          Phone
+        </th>
+        <th scope="col" class="px-6 py-3">
+          Information
+        </th>
+        <th scope="col" class="px-6 py-3">
+          Delete
+        </th>
+      </tr>
+      </thead>
+      <tbody *ngIf='claimsService'>
+      <ng-container *ngFor="let claim of claimsService.claims; let i = index">
+        <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
+          <th scope="row" class="flex items-center px-6 py-4 text-gray-900 whitespace-nowrap dark:text-white">
+            <div class="ps-3">
+              <div class="text-base font-semibold">{{claim.name}}</div>
+            </div>
+          </th>
+          <td class="px-6 py-4">
+            {{claim.phone}}
+          </td>
+          <td class="px-6 py-4">
+            <div class="flex items-center">
+              {{claim.description}}
+            </div>
+          </td>
+          <td class="px-6 py-4">
+            <p (click)="deleteClaim(claim.id)" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Delete</p>
+          </td>
+        </tr>
+      </ng-container>
+      </tbody>
+    </table>
+  </div>
+</div>
+
