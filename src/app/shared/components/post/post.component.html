@@ -5,8 +5,12 @@
   <div class="flex flex-col justify-between items-center m-4 p-8 w-80">
     <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">{{post.name}}</h5>
     <span class="mb-3 font-normal max-w-48 text-gray-700 dark:text-gray-400 overflow-hidden overflow-ellipsis">{{post.description}}</span>
-    <button type="button" class="focus:outline-none text-white bg-lightOrange hover:bg-yellow-500 focus:ring-4 focus:ring-yellow-300 font-bold rounded-lg text-lg py-4 px-8  me-2 mb-2 dark:focus:ring-yellow-900">Забрать питомца</button>
+
+    <button (click)="modalService.openClaim()"  class="focus:outline-none text-white bg-lightOrange hover:bg-yellow-500 focus:ring-4 focus:ring-yellow-300 font-bold rounded-lg text-lg py-4 px-8  me-2 mb-2 dark:focus:ring-yellow-900">Забрать питомца</button>
   </div>
 
-
 </a>
+
+<app-modal *ngIf="modalService.isVisibleClaim$ | async" class="z-50">
+  <app-modal-claims></app-modal-claims>
+</app-modal>
