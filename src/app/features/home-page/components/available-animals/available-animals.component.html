@@ -8,8 +8,6 @@
     </div>
   </div>
 
-
-
   <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 m-8 justify-between">
     <ng-container *ngIf="postService.posts">
       <app-post class="w-full" *ngFor="let post of postService.posts; let i = index" [post]="post"></app-post>
