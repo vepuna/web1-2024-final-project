@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import {RouterLink} from "@angular/router";
 import {NgOptimizedImage} from "@angular/common";
+import {GlobalService} from "../../../core/services/global.service";
 
 @Component({
   selector: 'app-footer',
@@ -12,8 +13,7 @@ import {NgOptimizedImage} from "@angular/common";
   templateUrl: './footer.component.html'
 })
 export class FooterComponent {
-  protected phoneNumber = "+37379923225";
-  protected location = "Бельцы, Молдова";
-  protected weekDaySchedule = "Пн-Пт: с 08:00 до 19:00";
-  protected weekEndsSchedule = "Сб-Вс: с 10:00 до 15:00";
+
+  constructor(protected globalService: GlobalService) {}
+
 }

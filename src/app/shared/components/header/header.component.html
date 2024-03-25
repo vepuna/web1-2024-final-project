@@ -28,8 +28,8 @@
         <img ngSrc="./assets/images/phone-call.svg" alt="" height="25" width="25">
       </div>
       <div class="font-medium dark:text-white">
-        <div>Бельцы, Молдова</div>
-        <div class="text-sm text-gray-500 dark:text-gray-400">+373 79923225</div>
+        <div>{{this.globalService.global.physical_address}}</div>
+        <div class="text-sm text-gray-500 dark:text-gray-400">{{this.globalService.global.phone_number}}</div>
       </div>
     </div>
   </div>

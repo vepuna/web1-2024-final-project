@@ -7,6 +7,7 @@ import { initFlowbite } from 'flowbite';
 import {TableClaimsComponent} from "./components/table-claims/table-claims.component";
 import {AsyncPipe, NgIf} from "@angular/common";
 import {ModalService} from "../../core/services/modal.service";
+import {GlobalSettingsComponent} from "./components/global-settings/global-settings.component";
 
 @Component({
   selector: 'app-dashboard',
@@ -18,7 +19,8 @@ import {ModalService} from "../../core/services/modal.service";
     CreatePostComponent,
     TableClaimsComponent,
     AsyncPipe,
-    NgIf
+    NgIf,
+    GlobalSettingsComponent
   ],
   templateUrl: './dashboard.component.html'
 })

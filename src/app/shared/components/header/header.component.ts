@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {RouterLink} from "@angular/router";
 import {MatIconModule} from '@angular/material/icon';
 import {MatDividerModule} from '@angular/material/divider';
@@ -7,6 +7,7 @@ import {AsyncPipe, NgIf, NgOptimizedImage} from "@angular/common";
 import {ModalClaimsComponent} from "../modal-claims/modal-claims.component";
 import {ModalComponent} from "../modal/modal.component";
 import {ModalService} from "../../../core/services/modal.service";
+import {GlobalService} from "../../../core/services/global.service";
 
 
 @Component({
@@ -17,8 +18,14 @@ import {ModalService} from "../../../core/services/modal.service";
     ],
   templateUrl: './header.component.html'
 })
-export class HeaderComponent {
-  constructor(protected modalService: ModalService) {
+export class HeaderComponent implements OnInit{
+  constructor(protected modalService: ModalService,
+              protected globalService: GlobalService) {
+
   }
+  ngOnInit() {
+    this.globalService.getGlobal().subscribe();
+  }
+
 
 }
