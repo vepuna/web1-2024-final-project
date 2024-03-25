@@ -3,13 +3,16 @@
     <div class="text-6xl font-extrabold">
       <p>Не покупай питомца,<br>возьми <span class="text-lightOrange">из приюта!</span></p>
     </div>
-    <div class="text-base font-light text-xl text-gray-500 mt-10">
+    <div class="text-base font-light text-gray-500 mt-10">
       <p>
         Веселые и спокойные, робкие и любознательные, пушистые и гладкие,<br> собачки и кошечки - все они мечтают о любящем и заботливом хозяине :)
       </p>
     </div>
     <div class="flex items-center mt-10">
-      <button type="button" (click)="modalService.openClaim()" class="focus:outline-none text-white bg-lightOrange hover:bg-yellow-500 focus:ring-4 focus:ring-yellow-300 font-medium rounded-lg text-xl py-5 px-16 me-2 mb-2 dark:focus:ring-yellow-900">Забрать питомца</button>
+      <button type="button" (click)="modalService.openClaim()"
+              class="focus:outline-none text-white bg-lightOrange hover:bg-hoverOrange hover:text-black focus:ring-4 focus:ring-yellow-300 font-bold rounded-lg text-xl py-5 px-16 me-2 mb-2 dark:focus:ring-yellow-900 transition-colors duration-300 ease-in-out">
+        Забрать питомца
+      </button>
       <div class="flex ml-4">
         <div class="flex w-14 h-14 m-3 rounded-full bg-amber-400 justify-center">
           <img ngSrc="./assets/images/phone-call.svg" alt="" height="20" width="20">

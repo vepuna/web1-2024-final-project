@@ -14,5 +14,6 @@ export class AppComponent {
   title = 'AngularProject';
   message = 'Hello World';
   bool = true;
+  public type = "hello"
 
 }

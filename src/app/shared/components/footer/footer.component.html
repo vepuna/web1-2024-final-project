@@ -1,4 +1,34 @@
-<footer class="bg-white dark:bg-gray-800 bottom-0 w-full">
+<footer class="bg-white dark:bg-gray-800 bottom-0 w-full my-24">
+  <div class="max-w-8xl container mx-auto flex flex-col py-10 lg:flex-row">
+    <div class="flex flex-col lg:w-1/3 bg-hoverOrange rounded-xl min-h-96 mb-8 lg:mb-0 lg:mr-28  justify-start p-10">
+      <h2 class="text-4xl font-extrabold">Мы находимся:</h2>
+      <div class="py-5">
+        <div class="flex flex-row items-center">
+          <div class="flex w-14 h-14 m-3 rounded-full bg-white justify-center">
+            <img ngSrc="./assets/images/phone-call.svg" alt="" height="20" width="20">
+          </div>
+          <span class="font-bold">{{phoneNumber}}</span>
+        </div>
+        <div class="flex flex-row items-center">
+          <div class="flex w-14 h-14 m-3 rounded-full bg-white justify-center">
+            <img ngSrc="./assets/images/mapin.svg" alt="" height="25" width="25">
+          </div>
+          <span >{{location}}</span>
+        </div>
+        <div class="flex flex-row items-center">
+          <div class="flex w-14 h-14 m-3 rounded-full bg-white justify-center">
+            <img ngSrc="./assets/images/mapin.svg" alt="" height="25" width="25">
+          </div>
+          <p>
+            <span class="block">{{weekDaySchedule}}</span>
+            <span class="block">{{weekEndsSchedule}}</span>
+
+          </p>
+        </div>
+      </div>
+    </div>
+    <iframe class="lg:w-2/3 mb-4 "  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d10728.546124851664!2d27.924048900000003!3d47.759406049999996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40cb672d8de7788f%3A0xd76f6be89b68c11c!2z0KbQldCd0KLQoCwg0JHQtdC70YzRhtGL!5e0!3m2!1sru!2s!4v1711387017273!5m2!1sru!2s" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+  </div>
   <div class="w-full mx-auto max-w-screen-xl p-4 md:flex md:items-center md:justify-between">
       <span class="text-sm text-gray-500 sm:text-center dark:text-gray-400">© 2024 4Paws Cozlov Alexei.
     </span>
