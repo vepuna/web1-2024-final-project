@@ -15,5 +15,10 @@ import {GlobalService} from "../../../core/services/global.service";
 export class FooterComponent {
 
   constructor(protected globalService: GlobalService) {}
-
+  scrollToTop(): void {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
+  }
 }

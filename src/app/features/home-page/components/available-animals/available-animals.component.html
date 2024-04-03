@@ -9,11 +9,13 @@
   </div>
 
   <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 m-8 justify-between">
-    <ng-container *ngIf="postService.posts">
-      <app-post class="w-full" *ngFor="let post of postService.posts; let i = index" [post]="post"></app-post>
-    </ng-container>
+  <ng-container *ngIf="postService.posts">
+    <app-post class="w-full" *ngFor="let post of postService.posts.slice(0, 4)"  [post]="post" ></app-post>
+  </ng-container>
   </div>
-
+  <div class="flex-col text-center">
+    <button (click)="scrollToTop()" routerLink="available-animals" class=" focus:outline-none text-2xl text-white bg-lightOrange hover:bg-hoverOrange hover:text-black focus:ring-4 focus:ring-yellow-300 font-bold rounded-lg py-4 px-8  me-2 mb-2 dark:focus:ring-yellow-900 transition-colors duration-300 ease-in-out">Больше милых лапок :)</button>
+  </div>
 </div>
 
 

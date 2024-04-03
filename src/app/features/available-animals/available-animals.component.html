@@ -1,0 +1,16 @@
+<div class="flex-col mt-10 mb-48">
+  <div class="flex-col text-center">
+    <div class="text-6xl font-extrabold my-8">
+      <p>Выбери того, кто тебе по душе</p>
+    </div>
+    <div class="max-w-screen-2xl mx-auto font-normal text-lg text-gray-500 justify-self-center">
+      <p>Нас тут действительно много</p>
+    </div>
+  </div>
+
+  <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 m-8 justify-between">
+    <ng-container *ngIf="postService.posts">
+      <app-post class="w-full" *ngFor="let post of postService.posts; let i = index" [post]="post"></app-post>
+    </ng-container>
+  </div>
+</div>

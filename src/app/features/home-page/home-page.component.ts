@@ -5,7 +5,7 @@ import {SmallStatisticComponent} from "./components/small-statistic/small-statis
 import {AvailableAnimalsComponent} from "./components/available-animals/available-animals.component";
 import {ModalService} from "../../core/services/modal.service";
 import {SmallInformationComponent} from "./components/small-information/small-information.component";
-import {AboutInformationComponent} from "./components/about-information/about-information.component";
+import {AboutInformationComponent} from "../../shared/components/about-information/about-information.component";
 
 @Component({
   selector: 'app-home-page',

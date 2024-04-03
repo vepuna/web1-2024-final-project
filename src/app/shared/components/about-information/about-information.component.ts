@@ -1,7 +1,7 @@
 import {Component, OnInit} from '@angular/core';
-import {ModalClaimsComponent} from "../../../../shared/components/modal-claims/modal-claims.component";
+import {ModalClaimsComponent} from "../modal-claims/modal-claims.component";
 import {FormBuilder, FormGroup, ReactiveFormsModule, Validators} from "@angular/forms";
-import {ClaimsService} from "../../../../core/services/claims.service";
+import {ClaimsService} from "../../../core/services/claims.service";
 import {NgIf} from "@angular/common";
 
 @Component({
