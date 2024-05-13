@@ -1,0 +1,34 @@
+{
+  "header": {
+    "main" : "Main",
+    "about" : "About",
+    "animals" : "Available Animals",
+    "contacts" : "Contacts",
+    "service" : "Services"
+  },
+  "header-panel": {
+    "title_1" : "Don't buy a pet",
+    "title_2" : "get one",
+    "title_3" : " from a shelter!",
+    "info_1" : "Cheerful and calm, shy and inquisitive, fluffy and smooth,",
+    "info_2" : "dogs and kitties - they all dream of a loving and caring owner :)"
+  },
+  "small-statistic": {
+    "dateOfFounding" : "Year of foundation of our animal shelter",
+    "animalsFoundedHouse" : "The animals have found their new homes",
+    "animalsInWaiting" : "The animals are waiting for their owners",
+    "numberVolunteers" : "Volunteers helping the shelter"
+  },
+  "available-animals": {
+    "title_1" : "They want to get ",
+    "title_2" : "into good hands.",
+    "more" : "More cute paws :)",
+    "about" : "Our pets need your help! You can make their life better. The shelter always needs food, leashes and collars, medicines, material and informational support. And also our dogs and cats need affection and communication with people, so we are always glad to have new volunteers"
+  },
+  "buttons": {
+    "getAnimal" : "Pick up a pet",
+    "moreAnimas" : "More cute paws :)",
+    "sendRequest" : "Send request",
+    "more" : "Read more"
+  }
+}

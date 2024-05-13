@@ -5,6 +5,7 @@ import {ImageUrlPipe} from "../../pipe/image-url.pipe";
 import {ModalClaimsComponent} from "../modal-claims/modal-claims.component";
 import {ModalComponent} from "../modal/modal.component";
 import {ModalService} from "../../../core/services/modal.service";
+import {TranslateModule} from "@ngx-translate/core";
 
 @Component({
   selector: 'app-post',
@@ -15,7 +16,8 @@ import {ModalService} from "../../../core/services/modal.service";
     AsyncPipe,
     ModalClaimsComponent,
     ModalComponent,
-    NgIf
+    NgIf,
+    TranslateModule
   ],
   templateUrl: './post.component.html'
 })

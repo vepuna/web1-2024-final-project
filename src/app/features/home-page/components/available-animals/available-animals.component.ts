@@ -6,12 +6,13 @@ import {ModalClaimsComponent} from "../../../../shared/components/modal-claims/m
 import {ModalComponent} from "../../../../shared/components/modal/modal.component";
 import {ModalService} from "../../../../core/services/modal.service";
 import {RouterLink} from "@angular/router";
+import {TranslateModule} from "@ngx-translate/core";
 
 @Component({
   selector: 'app-available-animals',
   standalone: true,
   imports: [
-    NgForOf, PostComponent, NgIf, AsyncPipe, ModalClaimsComponent, ModalComponent, RouterLink
+    NgForOf, PostComponent, NgIf, AsyncPipe, ModalClaimsComponent, ModalComponent, RouterLink, TranslateModule
   ],
   templateUrl: './available-animals.component.html'
 })

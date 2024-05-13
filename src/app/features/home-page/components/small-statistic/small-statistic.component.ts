@@ -1,11 +1,13 @@
 import { Component } from '@angular/core';
 import {NgOptimizedImage} from "@angular/common";
+import {TranslateModule} from "@ngx-translate/core";
 
 @Component({
   selector: 'app-small-statistic',
   standalone: true,
   imports: [
-    NgOptimizedImage
+    NgOptimizedImage,
+    TranslateModule
   ],
   templateUrl: './small-statistic.component.html'
 })
