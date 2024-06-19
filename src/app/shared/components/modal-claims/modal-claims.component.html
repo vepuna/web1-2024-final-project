@@ -1,12 +1,12 @@
 <form [formGroup]="form" (ngSubmit)="submit()">
   <div class="grid gap-4 mb-4 sm:grid-cols-1 w-64 items-center justify-items-center">
-    <h1 class="text-center font-bold text-2xl">Оставить заявку</h1>
-    <p class="block text-center mb-2 text-sm font-light text-gray-900 dark:text-white">Отправьте заявку и наши специалисты перезвонят Вам</p>
-    <input type="text" name="name" id="name" formControlName="name" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="Ваше имя">
-    <input type="text" name="brand" id="brand"  formControlName="phone" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="Номер телефона">
-    <input type="text" name="age" id="age"  formControlName="description" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="Комментарий">
+    <h1 class="text-center font-bold text-2xl">{{'modal-claims.requestName' | translate}}</h1>
+    <p class="block text-center mb-2 text-sm font-light text-gray-900 dark:text-white">{{'modal-claims.requestInfo' | translate}}</p>
+    <input type="text" name="name" id="name" formControlName="name" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="{{'modal-claims.name' | translate}}">
+    <input type="text" name="brand" id="brand"  formControlName="phone" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="{{'modal-claims.phoneNumber' | translate}}">
+    <input type="text" name="age" id="age"  formControlName="description" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="{{'modal-claims.comments' | translate}}">
     <button type="submit" (click)="createSubmit()" class="focus:outline-none text-white bg-lightOrange hover:bg-hoverOrange hover:text-black focus:ring-4 focus:ring-yellow-300 font-bold rounded-lg text-lg py-4 px-8  me-2 mb-2 dark:focus:ring-yellow-900 transition-colors duration-300 ease-in-out">
-      Отправить заявку
+      {{'modal-claims.sendedRequest' | translate}}
     </button>
   </div>
 </form>

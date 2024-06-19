@@ -3,6 +3,7 @@ import {ModalClaimsComponent} from "../modal-claims/modal-claims.component";
 import {FormBuilder, FormGroup, ReactiveFormsModule, Validators} from "@angular/forms";
 import {ClaimsService} from "../../../core/services/claims.service";
 import {NgIf} from "@angular/common";
+import {TranslateModule} from "@ngx-translate/core";
 
 @Component({
   selector: 'app-about-information',
@@ -10,7 +11,8 @@ import {NgIf} from "@angular/common";
   imports: [
     ModalClaimsComponent,
     ReactiveFormsModule,
-    NgIf
+    NgIf,
+    TranslateModule
   ],
   templateUrl: './about-information.component.html'
 })

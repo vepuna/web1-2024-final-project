@@ -30,5 +30,34 @@
     "moreAnimas" : "More cute paws :)",
     "sendRequest" : "Send request",
     "more" : "Read more"
+  },
+  "small-information": {
+    "vaccinated" : "All shelter pets are vaccinated and groomed",
+    "trained" : "Our pets are smart and litter box trained",
+    "founded" : "More than 200 pets have already found homes",
+    "working" : "More than 13 years of successful shelter operations"
+  },
+  "about-information": {
+    "shortName": "Briefly about our shelter",
+    "read": "Read more",
+    "pickUpPet": "Pick up a pet",
+    "personalNotify": "To leave a request, please fill out the form with your details",
+    "requireFields": "All input fields must be filled in",
+    "nameUser": "Your name",
+    "phoneNumber": "Phone number",
+    "comments": "Commentary",
+    "sendedRequest": "Submit a request",
+    "successRequest": "Thank you! Form sent"
+  },
+  "footer": {
+    "shortName":"We're located:"
+  },
+  "modal-claims": {
+    "requestName": "Leave a request",
+    "requestInfo": "Send a request and our specialists will call you back",
+    "name": "Your Name",
+    "phoneNumber": "Your phone number",
+    "comments": "Commentary",
+    "sendedRequest": "Submit a request"
   }
 }

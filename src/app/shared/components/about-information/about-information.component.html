@@ -1,24 +1,24 @@
 <div class="flex flex-col lg:flex-row items-center justify-between mx-10">
   <div class="lg:w-2/3 mb-4 lg:mb-0">
-    <h2 class="text-6xl font-extrabold ">Коротко о нашем приюте</h2>
+    <h2 class="text-6xl font-extrabold ">{{'about-information.shortName' | translate}}</h2>
     <p class="text-lg text-gray-500 py-10 max-w-4xl">{{information}}</p>
-    <button  class="focus:outline-none text-white bg-lightOrange hover:bg-hoverOrange hover:text-black focus:ring-4 focus:ring-yellow-300 font-bold rounded-lg text-lg py-4 px-8  me-2 mb-2 dark:focus:ring-yellow-900 transition-colors duration-300 ease-in-out">Читать далее</button>
+    <button  class="focus:outline-none text-white bg-lightOrange hover:bg-hoverOrange hover:text-black focus:ring-4 focus:ring-yellow-300 font-bold rounded-lg text-lg py-4 px-8  me-2 mb-2 dark:focus:ring-yellow-900 transition-colors duration-300 ease-in-out">{{'about-information.read' | translate}}</button>
 
   </div>
   <div class="lg:w-1/3 bg-hoverOrange rounded-xl min-h-96 items-center">
     <form *ngIf="!successValid" [formGroup]="form" (ngSubmit)="submit()">
       <div class="grid gap-4 mb-4 sm:grid-cols-1 px-10 py-10 items-center justify-items-center">
-        <h1 class="text-center font-bold text-4xl">Забрать питомца</h1>
-        <p class="block text-center mb-2 text-sm font-light text-gray-900 dark:text-white">Чтобы оставить заявку, пожалуйста, заполните форму, указав Ваши данные</p>
-        <label *ngIf="!validInput" class="text-red-500">Необходимо заполнить все поля ввода</label>
-        <input type="text" name="name" id="name" formControlName="name" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg  focus:ring-primary-600 focus:border-primary-600 block w-full p-5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="Ваше имя">
-        <input type="text" name="brand" id="brand"  formControlName="phone" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="Номер телефона">
-        <input type="text" name="age" id="age"  formControlName="description" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full py-10 px-5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="Комментарий">
+        <h1 class="text-center font-bold text-4xl">{{'about-information.pickUpPet' | translate}}</h1>
+        <p class="block text-center mb-2 text-sm font-light text-gray-900 dark:text-white">{{'about-information.personalNotify' | translate}}</p>
+        <label *ngIf="!validInput" class="text-red-500">{{'about-information.requireFields' | translate}}</label>
+        <input type="text" name="name" id="name" formControlName="name" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg  focus:ring-primary-600 focus:border-primary-600 block w-full p-5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="{{'about-information.nameUser' | translate}}">
+        <input type="text" name="brand" id="brand"  formControlName="phone" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="{{'about-information.phoneNumber' | translate}}">
+        <input type="text" name="age" id="age"  formControlName="description" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full py-10 px-5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="{{'about-information.comments' | translate}}">
         <button type="submit" (click)="createSubmit()" class="focus:outline-none text-white bg-lightOrange hover:bg-white hover:text-black focus:ring-4 focus:ring-yellow-300 font-bold rounded-lg text-lg py-4 px-8  me-2 mb-2 dark:focus:ring-yellow-900 transition-colors duration-300 ease-in-out">
-          Отправить заявку
+          {{'about-information.sendedRequest' | translate}}
         </button>
       </div>
     </form>
-    <h1 *ngIf="successValid" class="text-center  font-bold text-4xl">Спасибо! Форма отправлена</h1>
+    <h1 *ngIf="successValid" class="text-center  font-bold text-4xl">{{'about-information.successRequest' | translate}}</h1>
   </div>
 </div>

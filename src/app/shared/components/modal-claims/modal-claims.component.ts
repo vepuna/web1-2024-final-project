@@ -5,13 +5,15 @@ import {PostsService} from "../../../core/services/posts.service";
 import {AuthService} from "../../../core/services/auth.service";
 import {ModalService} from "../../../core/services/modal.service";
 import {ClaimsService} from "../../../core/services/claims.service";
+import {TranslateModule} from "@ngx-translate/core";
 
 @Component({
   selector: 'app-modal-claims',
   standalone: true,
   imports: [
     ImageUrlPipe,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    TranslateModule
   ],
   templateUrl: './modal-claims.component.html'
 })
