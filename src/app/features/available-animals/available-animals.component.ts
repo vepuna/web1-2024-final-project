@@ -3,6 +3,7 @@ import {NgForOf, NgIf} from "@angular/common";
 import {PostComponent} from "../../shared/components/post/post.component";
 import {PostsService} from "../../core/services/posts.service";
 import {RouterLink} from "@angular/router";
+import {TranslateModule} from "@ngx-translate/core";
 
 @Component({
   selector: 'app-available-animals',
@@ -11,7 +12,8 @@ import {RouterLink} from "@angular/router";
     NgForOf,
     NgIf,
     PostComponent,
-    RouterLink
+    RouterLink,
+    TranslateModule
   ],
   templateUrl: './available-animals.component.html'
 })

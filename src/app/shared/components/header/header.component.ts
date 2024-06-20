@@ -32,6 +32,10 @@ export class HeaderComponent implements OnInit{
     localStorage.setItem('selectedLanguage', language);
     this.currentLanguage = language;
   }
+  scrollToBottom(event: Event): void {
+    event.preventDefault();
+    window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
+  }
   ngOnInit() {
     this.globalService.getGlobal().subscribe();
   }

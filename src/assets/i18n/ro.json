@@ -1,0 +1,67 @@
+{
+  "header": {
+    "main" : "Principal",
+    "about" : "Despre",
+    "animals" : "Animale disponibile",
+    "contacts" : "Contacte",
+    "service" : "Servicii"
+  },
+  "header-panel": {
+    "title_1" : "Nu cumpăra un animal de companie",
+    "title_2" : "ia unul",
+    "title_3" : " de la adăpost!",
+    "info_1" : "Veseli și calmi, timizi și curioși, pufoși și netezi,",
+    "info_2" : "câini și pisici - toți visează la un stăpân iubitor și grijuliu :)"
+  },
+  "small-statistic": {
+    "dateOfFounding" : "Anul înființării adăpostului nostru pentru animale",
+    "animalsFoundedHouse" : "Animalele și-au găsit noile case",
+    "animalsInWaiting" : "Animalele așteaptă stăpânii lor",
+    "numberVolunteers" : "Voluntari care ajută adăpostul"
+  },
+  "available-animals": {
+    "title_1" : "Ei doresc să ajungă ",
+    "title_2" : "în mâini bune.",
+    "more" : "Mai multe lăbuțe drăguțe :)",
+    "about" : "Animalele noastre au nevoie de ajutorul tău! Poți să le îmbunătățești viața. Adăpostul are întotdeauna nevoie de hrană, lese și zgărzi, medicamente, suport material și informațional. De asemenea, câinii și pisicile noastre au nevoie de afecțiune și comunicare cu oamenii, așa că suntem întotdeauna bucuroși să avem noi voluntari."
+  },
+  "buttons": {
+    "getAnimal" : "Ia un animal",
+    "moreAnimas" : "Mai multe animali drăguțe :)",
+    "sendRequest" : "Trimite cerere",
+    "more" : "Citește mai mult"
+  },
+  "small-information": {
+    "vaccinated" : "Toate animalele din adăpost sunt vaccinate și îngrijite",
+    "trained" : "Animalele noastre sunt inteligente și dresate",
+    "founded" : "Peste 200 de animale și-au găsit deja case",
+    "working" : "Peste 13 ani de activitate de succes a adăpostului"
+  },
+  "about-information": {
+    "shortName": "Despre adăpostul nostru",
+    "info": "Adăpostul nostru este un adăpost privat pentru câini și pisici fără stăpân din Bălți. Aici locuiesc aproape 200 de câini și 150 de pisici. Mari și mici, pufoși și netezi, veseli și gânditori - și toți au un mare vis - să-și întâlnească Omul și să găsească o Casă. \n Animalele noastre au nevoie de ajutorul tău! Poți să le îmbunătățești viața. Adăpostul are întotdeauna nevoie de hrană, lese și zgărzi, medicamente, suport material și informațional. De asemenea, câinii și pisicile noastre au nevoie de afecțiune și comunicare cu oamenii, așa că suntem întotdeauna bucuroși să avem noi voluntari.",
+    "pickUpPet": "Ia un animal de companie",
+    "personalNotify": "Pentru a lăsa o cerere, te rugăm să completezi formularul cu detaliile tale",
+    "requireFields": "Toate câmpurile trebuie completate",
+    "nameUser": "Numele tău",
+    "phoneNumber": "Numărul de telefon",
+    "comments": "Comentariu",
+    "sendedRequest": "Trimite cerere",
+    "successRequest": "Mulțumim! Formular trimis"
+  },
+  "footer": {
+    "shortName":"Ne găsești la:"
+  },
+  "modal-claims": {
+    "requestName": "Lăsați o cerere",
+    "requestInfo": "Trimiteți o cerere și specialiștii noștri vă vor contacta",
+    "name": "Numele tău",
+    "phoneNumber": "Numărul tău de telefon",
+    "comments": "Comentariu",
+    "sendedRequest": "Trimite cerere"
+  },
+  "available-animalsPage": {
+    "title": "Alege pe cineva care îți place",
+    "subTitle": "Aici suntem cu adevărat mulți"
+  }
+}
